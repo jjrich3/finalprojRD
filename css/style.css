@@ -1,0 +1,239 @@
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.nav_links {
+    background-color: lightgray;
+    display: flex;
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+}
+.nav_links .active{
+    border: 3px solid black;
+}
+.nav_links li:hover{
+    border: 3px dashed black;
+}
+img{
+    max-height: 200px;
+    max-width: 300px;
+}
+.lions{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    box-sizing: border-box;
+    align-content: center;
+    border: 15px solid #009FF5;
+    border-radius: 10px;
+}
+.pistons{
+    display: flexbox;
+    border: 5px solid #1D42BA;
+}
+.redWings{
+    display: flexbox;
+    border: 5px solid #CE1126;
+}
+.tigers{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    box-sizing: border-box;
+    width: 90%;
+    height: 400px;
+    align-self: center;
+    justify-self: center;
+    border: 5px solid #0C2340;
+    border-radius: 10px;
+}
+.overview{
+    justify-self: center;
+    align-self: center;
+    grid-column: 1 / span 2;
+    height: 200px;
+}
+.logo{
+    max-width: 50px;
+    max-height: 50px;
+}
+/*lions and tigers*/
+#division, #stadium-text, #coach-text, #player2-text, #hofplayer1-text, #hofplayer3-text, #old-stadium,
+#player1, #player3, #hofplayer2 {
+    grid-column-start: 1;
+}
+#division-text, #stadium, #coach, #player2, #hofplayer1, #hofplayer3, #old-stadium-text,
+#player1-text, #player3-text, #hofplayer2-text {
+    grid-column-start: 2;
+}
+#stadium-text{
+    grid-row-start: 3;
+}
+#coach-text {
+    grid-row-start: 5;
+}
+#player2-text {
+    grid-row-start: 7;
+}
+#hofplayer1-text{
+    grid-row-start: 9;
+}
+#hofplayer3-text{
+    grid-row-start: 11;
+}
+.textbox, .player-text, .hofplayer-text{
+    text-align: center;
+    line-height: 200px;
+    height: 200px;
+}
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+@media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; /* Removes scroll animation */
+    }
+  
+    .skip a{
+      -webkit-transition: none; /* sets to default setting */
+      transition: none;        /* sets to default setting */
+     }
+  
+    /*Turn off parallax*/
+    header{
+      background-attachment: initial;
+    }
+}
+.skip{
+    position: absolute;
+    top: -40px;
+  }
+  
+  /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
+  .skip :focus{
+    position: absolute;
+    /*top: 20px;*/ /*40 px seems better for viewing*/
+    top: 40px;
+    white-space: nowrap;
+  }
+
+header{
+    background-color: #fff;
+}
+body > header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+}
+
+@media screen and (min-width: 800px) {
+
+.nav_links {
+    background-color: lightgray;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.lions{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    box-sizing: border-box;
+    align-content: center;
+    border: 15px solid #009FF5;
+    border-radius: 10px;
+}
+.pistons{
+    display: flexbox;
+    border: 5px solid #1D42BA;
+}
+.redWings{
+    display: flexbox;
+    border: 5px solid #CE1126;
+}
+.tigers{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    box-sizing: border-box;
+    width: 90%;
+    height: 400px;
+    align-self: center;
+    justify-self: center;
+    border: 5px solid #0C2340;
+    border-radius: 10px;
+}
+
+/*
+.filler{
+    grid-column: 1 / span -1;
+    height: 400px;
+}
+*/
+.overview{
+    justify-self: center;
+    align-self: center;
+    grid-column: 1 / span 6;
+    height: 400px;
+}
+
+#player1{
+    grid-column-start: 2;
+}
+#player2{
+    grid-column-start: 4;
+}
+#player3{
+    grid-column-start: 6;
+}
+.player1-text{
+    grid-column-start: 1;
+    grid-row-start: 4;
+}
+}
+/*
+.division img{
+    grid-column: 1 / span 2;
+    height: 200px;
+}
+.stadium{
+    grid-column: 3 / span 2;
+    width: 100%;
+}
+*/
+/*
+@media screen and (min-width: 800px) {
+    .nav_links {
+        background-color: lightgray;
+        display: flex;
+        position: fixed;
+        width: 15%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 100%;
+    }
+
+}
+*/
+/* color values for teams
+border: 2px solid #0076B6;
+    background-color: #B0B7BC;
+border: 2px solid #1D42BA;
+    background-color: #C8102E;    
+border: 2px solid #CE1126;
+    background-color: #FFF;
+border: 2px solid #0C2340;
+    background-color: #FA4616;
+    */
