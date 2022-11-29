@@ -19,10 +19,71 @@ h1{
 .nav_links li:hover{
     border: 3px dashed black;
 }
-img{
-    max-height: 200px;
-    max-width: 300px;
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
 }
+img{
+    max-height: 120px;
+    max-width: 150px;
+}
+.lions{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    box-sizing: border-box;
+    align-content: center;
+    border: 15px solid #009FF5;
+    border-radius: 10px;
+}
+.pistons{
+    display: flexbox;
+    border: 5px solid #1D42BA;
+}
+.redWings{
+    display: flexbox;
+    border: 5px solid #CE1126;
+}
+.tigers{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    box-sizing: border-box;
+    width: 90%;
+    height: 400px;
+    align-self: center;
+    justify-self: center;
+    border: 5px solid #0C2340;
+    border-radius: 10px;
+}
+.overview{
+    justify-self: center;
+    align-self: center;
+    grid-column: 1 / span 2;
+    height: 100px;
+}
+.logo{
+    display: none;
+}
+.division, .stadium, .coach, .player, .hofplayer, 
+.textbox, .player-text, .hofplayer-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textbox, .player-text, .hofplayer-text{
+    display: none;
+}
+
+
+@media screen and (min-width: 500px) {
+    img{
+        max-height: 200px;
+        max-width: 250px;
+    }
 .lions{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -58,6 +119,7 @@ img{
     height: 200px;
 }
 .logo{
+    display: flex;
     max-width: 50px;
     max-height: 50px;
 }
@@ -86,18 +148,14 @@ img{
     grid-row-start: 11;
 }
 .textbox, .player-text, .hofplayer-text{
-    text-align: center;
-    line-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 200px;
+    overflow: auto;
 }
-.skip a{
-    background: white;
-    left: 0;
-    padding: 6px;
-    -webkit-transition: top 1s ease-out;
-    transition: top 1s ease-out;
-    z-index: 1;
 }
+
 @media screen and (prefers-reduced-motion: reduce){
     html{
         scroll-behavior: auto; /* Removes scroll animation */
@@ -138,15 +196,6 @@ body > header {
 
 @media screen and (min-width: 800px) {
 
-.nav_links {
-    background-color: lightgray;
-    display: flex;
-    position: fixed;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
 .lions{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
