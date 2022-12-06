@@ -2,8 +2,15 @@ h1{
     text-align: center;
     font-size: 50px;
 }
-
+h2{
+    font-size: 30px;
+}
+li, h1, h2, p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Navigation Links Start*/
 .nav_links {
+    height: 50px;
     background-color: lightgray;
     display: flex;
     position: static;
@@ -27,39 +34,217 @@ h1{
     transition: top 1s ease-out;
     z-index: 1;
 }
+/*Navigation Links End*/
+
 img{
     max-height: 120px;
     max-width: 150px;
 }
+.index{
+    background-position-x: center;
+    background-image: url("../images/detroit.jpg");
+    background-repeat: no-repeat;
+}
+#detHome, footer{
+    background-color: rgba(225, 225, 225, 0.5);
+}
+.home, .homehead{
+    /*background: rgba(225, 225, 225, 0.5);*/
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    max-width: 75%;
+    margin-left: 12.5%;
+    text-align: center;
+    
+}
+
+/*
+.homehead, footer{
+    justify-content: left;
+    padding: 10px 10px;
+}
+*/
+.homeheader, .homepage, .espn{
+    padding: 10px 0;
+}
+
+.homepage .espn{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 50px;
+}
+
+.espn h2, .espn p{
+    grid-column: 1 / span 2;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+button:focus, button:hover {
+    border: 3px solid black;
+}
+/*-----------------------------Buttons ----------------------------*/
+#lionbtn {
+    background: #009FF5;
+    background-image: -webkit-linear-gradient(top, #009FF5, #B0B7BC);
+    background-image: -moz-linear-gradient(top, #009FF5, #B0B7BC);
+    background-image: -ms-linear-gradient(top, #009FF5, #B0B7BC);
+    background-image: -o-linear-gradient(top, #009FF5, #B0B7BC);
+    background-image: linear-gradient(to bottom, #009FF5, #B0B7BC);
+    -webkit-border-radius: 20;
+    -moz-border-radius: 20;
+    border-radius: 20px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+#lionbtn:hover, #lionbtn:focus {
+    background: #009FF5;
+    text-decoration: none;
+}
+#pistonbtn {
+    background: #1D42BA;
+    background-image: -webkit-linear-gradient(top, #1D42BA, #C8102E);
+    background-image: -moz-linear-gradient(top, #1D42BA, #C8102E);
+    background-image: -ms-linear-gradient(top, #1D42BA, #C8102E);
+    background-image: -o-linear-gradient(top, #1D42BA, #C8102E);
+    background-image: linear-gradient(to bottom, #1D42BA, #C8102E);
+    -webkit-border-radius: 20;
+    -moz-border-radius: 20;
+    border-radius: 20px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+#pistonbtn:hover, #pistonbtn:focus {
+    background: #1D42BA;
+    text-decoration: none;
+}
+#redbtn {
+    background: #CE1126;
+    background-image: -webkit-linear-gradient(top, #CE1126, #000);
+    background-image: -moz-linear-gradient(top, #CE1126, #000);
+    background-image: -ms-linear-gradient(top, #CE1126, #000);
+    background-image: -o-linear-gradient(top, #CE1126, #000);
+    background-image: linear-gradient(to bottom, #CE1126, #000);
+    -webkit-border-radius: 20;
+    -moz-border-radius: 20;
+    border-radius: 20px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  #redbtn:hover, #redbtn:focus {
+    background: #CE1126;
+    text-decoration: none;
+  }
+  #tigerbtn {
+    background: #FA4616;
+    background-image: -webkit-linear-gradient(top, #FA4616, #0C2340);
+    background-image: -moz-linear-gradient(top, #FA4616, #0C2340);
+    background-image: -ms-linear-gradient(top, #FA4616, #0C2340);
+    background-image: -o-linear-gradient(top, #FA4616, #0C2340);
+    background-image: linear-gradient(to bottom, #FA4616, #0C2340);
+    -webkit-border-radius: 20;
+    -moz-border-radius: 20;
+    border-radius: 20px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  #tigerbtn:hover, #tigerbtn:focus {
+    background: #FA4616;
+    text-decoration: none;
+  }
+  /*--------------------------Buttons End----------------------------*/
+
+/*lions & tigers*/
 .lions{
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
     box-sizing: border-box;
     align-content: center;
-    border: 15px solid #009FF5;
+    border: 5px solid #009FF5;
     border-radius: 10px;
-}
-.pistons{
-    display: flexbox;
-    border: 5px solid #1D42BA;
-}
-.redWings{
-    display: flexbox;
-    border: 5px solid #CE1126;
 }
 .tigers{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
     box-sizing: border-box;
-    width: 90%;
-    height: 400px;
-    align-self: center;
-    justify-self: center;
-    border: 5px solid #0C2340;
+    align-content: center;
+    border: 5px solid #FA4616;
     border-radius: 10px;
 }
+.player, .hofplayer, .stadium {
+    -ms-grid-column-span: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.division, .coach, #player3, #hofplayer3,
+.textbox, .player-text, .hofplayer-text, .titles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / span 2;
+}
+
+.textbox, .player-text, .hofplayer-text{
+    display: none;
+}
+.titles{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 0 0;
+}
+/*pistons & red wings*/
+.pistons, .redWings{
+    display: flex;
+    flex-direction: column;
+}
+#pistonmain{
+    border: 5px solid #1D42BA;
+    border-radius: 10px;
+}
+#redWingmain{
+    border: 5px solid #CE1126;
+    border-radius: 10px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0px 0px 20px 0px;
+}
+.textboxFlex, .imageFlex, .titlesFlex{
+    
+    align-self: center;
+    text-align: center;
+}
+.imgtext{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 .overview{
+    display: grid;
     justify-self: center;
     align-self: center;
     grid-column: 1 / span 2;
@@ -68,50 +253,94 @@ img{
 .logo{
     display: none;
 }
-.division, .stadium, .coach, .player, .hofplayer, 
-.textbox, .player-text, .hofplayer-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+@media screen and (max-width: 275px) {
+    p{
+        max-height: 200px;
+        overflow: auto;
+    }
 }
-.textbox, .player-text, .hofplayer-text{
-    display: none;
+@media screen and (max-width: 330px) {
+    img{
+        max-width: 49%;
+    }
 }
 
 
 @media screen and (min-width: 500px) {
     img{
         max-height: 200px;
-        max-width: 250px;
+        max-width: 240px;
     }
+    .home, .homehead, footer{
+        padding: 10px 10px;
+        margin-left: 0;
+    }
+    .home{
+        max-width: 100%;
+        text-align: left;
+    }
+    .homehead, footer{
+        justify-content: left;
+    }
+
 .lions{
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
     box-sizing: border-box;
     align-content: center;
-    border: 15px solid #009FF5;
-    border-radius: 10px;
+    border-width: 10px; /*solid #009FF5;
+    border-radius: 10px;*/
 }
-.pistons{
-    display: flexbox;
-    border: 5px solid #1D42BA;
+.pistons, .redWings{
+    flex-direction: column-reverse;
 }
-.redWings{
-    display: flexbox;
-    border: 5px solid #CE1126;
+#pistonmain{
+    justify-content: center;
+    border-width: 10px /*solid #1D42BA*/;
+}    
+#redWingmain{
+    border-width: 10px /*solid #CE1126*/;
 }
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px 0px 20px 0px;
+
+}
+.titlesFlex{
+    width: 50%;
+    background-color: #CE1126;
+    color: white;
+    margin: 10px;
+    padding-bottom: 5px;
+}
+.imgtext{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+}
+
+#pistonHead h1, #redWingHead h1{
+    background-color: #CE1126;
+    color: white;
+    align-self: center;
+    margin: 0 62px;
+}
+
 .tigers{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
     box-sizing: border-box;
-    width: 90%;
-    height: 400px;
-    align-self: center;
-    justify-self: center;
-    border: 5px solid #0C2340;
-    border-radius: 10px;
+    align-content: center;
+    border-width: 10px; /*solid #0C2340;
+    border-radius: 10px*/;
 }
+
 .overview{
     justify-self: center;
     align-self: center;
@@ -127,11 +356,19 @@ img{
 #division, #stadium-text, #coach-text, #player2-text, #hofplayer1-text, #hofplayer3-text, #old-stadium,
 #player1, #player3, #hofplayer2 {
     grid-column-start: 1;
+    grid-column: 1 / span 1;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
 }
 #division-text, #stadium, #coach, #player2, #hofplayer1, #hofplayer3, #old-stadium-text,
 #player1-text, #player3-text, #hofplayer2-text {
     grid-column-start: 2;
+    grid-column: 2 / span 1;
+    -ms-grid-column-span: 1;
+    text-align: left;
 }
+
 #stadium-text{
     grid-row-start: 3;
 }
@@ -147,13 +384,19 @@ img{
 #hofplayer3-text{
     grid-row-start: 11;
 }
+
 .textbox, .player-text, .hofplayer-text{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
     overflow: auto;
+    margin-left: 5px;
 }
+.titles{
+    display: none;
+}
+
 }
 
 @media screen and (prefers-reduced-motion: reduce){
@@ -194,62 +437,141 @@ body > header {
 
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 830px) {
 
-.lions{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    box-sizing: border-box;
-    align-content: center;
-    border: 15px solid #009FF5;
-    border-radius: 10px;
+    .lions{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        box-sizing: border-box;
+        align-content: center;
+        border-width: 15px; /*solid #009FF5;
+        border-radius: 10px;*/
+    }
+    .overview{
+        justify-self: center;
+        align-self: center;
+        grid-column: 1 / span 6;
+        height: 200px;
+    }
+    .overview h1{
+        align-self: center;
+    }
+    .img{
+        max-width: 200px;
+        max-height: fit-content;
+    }
+    .titles{
+        width: 100%;
+        background-color:  lightgray;
+        margin: 0 15px 0 0;
+        padding-bottom: 5px;
+    }
+    .tigTitles{
+        background-color: #0C2340;
+        color: white;
+    }
+    /*reset*/
+    #stadium-text, #coach-text, #player2-text, #hofplayer1-text, #hofplayer3-text{
+        grid-row-start: auto;
+    }
+    .titles{
+        -ms-grid-column-span: 1;
+    }
+    #division-title, #stadium-title, #division, #stadium, #player-title, #player2, #hofplayer-title, #hofplayer2{
+        grid-column-start: 1;
+    } 
+    #stadium-text, #player2-text, #division-text, #hofplayer2-text{
+        grid-column-start: 2;
+    }
+    #coach-title, #coach, #old-stadium, #player1, #player3, #hofplayer1, #hofplayer3{
+        grid-column-start: 3;
+    }
+    #coach-text, #old-stadium-text, #player1-text, #player3-text, #hofplayer1-text, #hofplayer3-text{
+        grid-column-start: 4;
+    }
+    p{
+        text-align: center;
+    }
+    #coach-title{
+        grid-row-start: 2;
+    }
+    #coach, #coach-text{
+        grid-row-start: 3;
+    }
+    #stadium-title{
+        grid-column: 1 /span 4;
+    }
+    .textbox{
+        margin-right: 15px;
+    }
+
+/*
+.textbox, .titles{
+    grid-row-start: 1;
+    grid-column: 2/ span 1;
 }
-.pistons{
-    display: flexbox;
-    border: 5px solid #1D42BA;
+.image{
+    grid-row-start: 1;
+    grid-column: 3/ span 2;
+}*/
+
+.pistons, .redWings{
+    flex-direction: column;
 }
-.redWings{
-    display: flexbox;
-    border: 5px solid #CE1126;
+#pistonmain{
+    border-width: 15px /*solid #1D42BA*/;
 }
+#redWingmain{
+    border-width: 15px /*solid #CE1126*/;
+}
+
+.titlesFlex{
+    width: 100%;
+}
+.imgtext{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 400px;
+}
+.container{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.container :nth-child(odd){
+    flex-direction: row-reverse;
+}
+.container :nth-child(4n){
+    flex-direction: column-reverse;
+}
+
 .tigers{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     box-sizing: border-box;
-    width: 90%;
-    height: 400px;
-    align-self: center;
-    justify-self: center;
-    border: 5px solid #0C2340;
-    border-radius: 10px;
+    align-content: center;
+    border-width: 15px; /*solid #0C2340;
+    border-radius: 10px;*/
 }
-
+.titles{
+    display: flex;
+}
 /*
 .filler{
     grid-column: 1 / span -1;
     height: 400px;
 }
 */
-.overview{
-    justify-self: center;
-    align-self: center;
-    grid-column: 1 / span 6;
-    height: 400px;
-}
 
-#player1{
-    grid-column-start: 2;
 }
-#player2{
-    grid-column-start: 4;
-}
-#player3{
-    grid-column-start: 6;
-}
-.player1-text{
-    grid-column-start: 1;
-    grid-row-start: 4;
-}
+@media screen and (min-width: 1230px) {
+    #playCont .imgtext{
+        flex-direction: row;
+    }
+    #hofCont .imgtext{
+        flex-direction: row-reverse;
+    }
+
 }
 /*
 .division img{
