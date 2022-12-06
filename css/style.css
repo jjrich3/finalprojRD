@@ -248,7 +248,6 @@ button:focus, button:hover {
     justify-self: center;
     align-self: center;
     grid-column: 1 / span 2;
-    height: 100px;
 }
 .logo{
     display: none;
