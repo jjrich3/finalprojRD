@@ -11,12 +11,12 @@
 
 <!-- All of the visible code in the page belongs in the body tag -->
 <body class="index">
-	<div class="skip"><a href="#main">Skip to Main Content</a></div>
+	<div class="skip"><a href="#detHome">Skip to Main Content</a></div>
 	<header>
 		<nav>
 			<ul class = "nav_links">
 				<!-- Since I am on the index file I added class = action to the link to index. -->
-				<li><img src="images/detroit.jpg" class="logo" alt=""/></li>
+				<li><img src="images/tigers/logo.png" class="logo" alt=""/></li>
 				<li class="active"><a href = "index.html" >Detroit Sports</a></li>
 				<li><a href = "lions.html">Detroit Lions</a></li> 
 				<li><a href = "pistons.html">Detroit Pistons</a></li> <!--active-->
@@ -24,11 +24,39 @@
                 <li><a href = "tigers.html">Detroit Tigers</a></li>
 			</ul>
 		</nav>
-		<h1>Home Page</h1>
 	</header>
 
-	<main id = "main">
-		<p>Detroit's sports teams are starting to rebuild...</p>
+	<main class="main" id = "detHome">
+		<h1 class="homeheader" tabindex="0">Home Page</h1>
+
+		<div class = "homepage">
+			<h2 class="homehead" tabindex="0">Summary</h2>
+			<p class="home" tabindex="0">&emsp;Detroit's sports teams are starting to rebuild after a few years of mediocracy. 
+				This website is an introduction to the four major professional sports teams in detroit which are The Lions, Pistons, Red Wings, and Tigers. 
+				Each page includes information about the team such as stadium, current players, and the division they play in. 
+				This may be helpful for people that want to get into new teams, as well as people who may want to learn a thing or two about a team they may be watching.
+
+			</p>
+		</div>
+		<div class="espn">
+			<h2 class="homehead" tabindex="0">Other Sources</h2>
+			<p class="home" tabindex="0">&emsp;The buttons below lead to their respective ESPN websites with current news and information such as schedule and record</p>
+			<br>
+			<div class="btn">
+			<a tabindex="-1" href="https://www.espn.com/nfl/team/_/name/det/detroit-lions">
+            <button id="lionbtn">Lions</button>
+        	</a>
+			<a tabindex="-1" href="https://www.espn.com/nba/team/_/name/det/detroit-pistons">
+            <button id="pistonbtn">Pistons</button>
+        	</a>
+			<a tabindex="-1" href="https://www.espn.com/nhl/team/_/name/det/detroit-red-wings">
+            <button id="redbtn">Red Wings</button>
+        	</a>
+			<a tabindex="-1" href="https://www.espn.com/mlb/team/_/name/det/detroit-tigers">
+            <button id="tigerbtn">Tigers</button>
+        	</a>
+			</div>
+		</div>
 
 	</main>
 
