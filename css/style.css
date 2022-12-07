@@ -8,6 +8,9 @@ h2{
 li, h1, h2, p{
     font-family: Arial, Helvetica, sans-serif;
 }
+:focus{
+    border: 0px solid black;
+}
 /*Navigation Links Start*/
 .nav_links {
     height: 50px;
@@ -23,11 +26,12 @@ li, h1, h2, p{
 .nav_links li a{
     color: black;
     text-decoration: none;
+    text-align: center;
 }
 .nav_links .active{
     border: 3px solid black;
 }
-.nav_links li:hover{
+.nav_links li:hover, .nav_links li:focus{
     border: 3px dashed black;
 }
 .skip a{
@@ -39,11 +43,31 @@ li, h1, h2, p{
     z-index: 1;
 }
 /*Navigation Links End*/
+.skip{
+    position: absolute;
+    top: -40px;
+  }
+  .skipLink{
+    color: black;
+    text-decoration: none;
+  }
+  
+  .skip :focus{
+    position: absolute;
+    top: 40px;
+    white-space: nowrap;
+  }
 
-img{
-    max-height: 120px;
-    max-width: 150px;
+header{
+    background-color: #fff;
 }
+body > header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+}
+/*HomePage*/
 .index{
     background-position-x: center;
     background-image: url("../images/detroit.jpg");
@@ -53,32 +77,21 @@ img{
     background-color: rgba(225, 225, 225, 0.5);
 }
 .home, .homehead{
-    /*background: rgba(225, 225, 225, 0.5);*/
     display: flex;
     align-self: center;
     justify-content: center;
     max-width: 75%;
     margin-left: 12.5%;
-    text-align: center;
-    
+    text-align: center; 
 }
-
-/*
-.homehead, footer{
-    justify-content: left;
-    padding: 10px 10px;
-}
-*/
 .homeheader, .homepage, .espn{
     padding: 10px 0;
 }
-
 .homepage .espn{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 50px 50px 50px;
 }
-
 .espn h2, .espn p{
     grid-column: 1 / span 2;
 }
@@ -91,6 +104,7 @@ img{
 .btn button{
    width: 150px;
 }
+
 button:focus, button:hover {
     border: 3px solid black;
 }
@@ -178,8 +192,15 @@ button:focus, button:hover {
     text-decoration: none;
   }
   /*--------------------------Buttons End----------------------------*/
-
+/*End Homepage*/
+.logo{
+    display: none;
+}
 /*lions & tigers*/
+img{
+    max-height: 120px;
+    max-width: 150px;
+}
 .lions{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -211,7 +232,6 @@ button:focus, button:hover {
     align-items: center;
     grid-column: 1 / span 2;
 }
-
 .textbox, .player-text, .hofplayer-text{
     display: none;
 }
@@ -220,6 +240,7 @@ button:focus, button:hover {
     flex-direction: column;
     padding: 10px 0 0 0;
 }
+/*lions & tigers end*/
 /*pistons & red wings*/
 .pistons, .redWings{
     display: flex;
@@ -250,16 +271,21 @@ button:focus, button:hover {
     flex-direction: column;
     flex-wrap: wrap;
 }
+/*pistons & red wings end*/
 .overview{
     display: grid;
     justify-self: center;
     align-self: center;
     grid-column: 1 / span 2;
 }
-.logo{
-    display: none;
+@media screen and (max-width: 250px) {
+    .nav_links li, p, h2{
+        font-size: 5vw;
+    }
+    h1{
+        font-size: 10vw;
+    }
 }
-
 @media screen and (max-width: 275px) {
     p{
         max-height: 200px;
@@ -278,6 +304,7 @@ button:focus, button:hover {
         max-height: 200px;
         max-width: 240px;
     }
+    /*Homepage*/
     .home, .homehead, footer{
         padding: 10px 10px;
         margin-left: 0;
@@ -289,76 +316,13 @@ button:focus, button:hover {
     .homehead, footer{
         justify-content: left;
     }
+    /*Homepage end*/
 
-.lions{
-    display: grid;
+    /*lions & tigers*/
+.lions, .tigers{
     grid-template-columns: 1fr 1fr;
-    width: 100%;
-    box-sizing: border-box;
-    align-content: center;
-    border-width: 10px; /*solid #009FF5;
-    border-radius: 10px;*/
+    border-width: 10px;
 }
-.pistons, .redWings{
-    flex-direction: column-reverse;
-}
-#pistonmain{
-    justify-content: center;
-    border-width: 10px /*solid #1D42BA*/;
-}    
-#redWingmain{
-    border-width: 10px /*solid #CE1126*/;
-}
-.container{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0px 0px 20px 0px;
-
-}
-.titlesFlex{
-    width: 50%;
-    background-color: #CE1126;
-    color: white;
-    margin: 10px;
-    padding-bottom: 5px;
-}
-.imgtext{
-    display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: nowrap;
-}
-
-#pistonHead h1, #redWingHead h1{
-    background-color: #CE1126;
-    color: white;
-    align-self: center;
-    margin: 0 62px;
-}
-
-.tigers{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    box-sizing: border-box;
-    align-content: center;
-    border-width: 10px; /*solid #0C2340;
-    border-radius: 10px*/;
-}
-
-.overview{
-    justify-self: center;
-    align-self: center;
-    grid-column: 1 / span 2;
-    height: 200px;
-}
-.logo{
-    display: flex;
-    max-width: 50px;
-    max-height: 50px;
-}
-/*lions and tigers*/
 #division, #stadium-text, #coach-text, #player2-text, #hofplayer1-text, #hofplayer3-text, #old-stadium,
 #player1, #player3, #hofplayer2 {
     grid-column-start: 1;
@@ -402,7 +366,53 @@ button:focus, button:hover {
 .titles{
     display: none;
 }
+/*lions & tigers end*/
+/*pistons & red wings*/
+.pistons, .redWings{
+    flex-direction: column-reverse;
+}
+#pistonmain, #redWingmain{
+    justify-content: center;
+    border-width: 10px;
+}    
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px 0px 20px 0px;
+}
+.titlesFlex{
+    width: 50%;
+    background-color: #CE1126;
+    color: white;
+    margin: 10px;
+    padding-bottom: 5px;
+}
+.imgtext{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+}
 
+#pistonHead h1, #redWingHead h1{
+    background-color: #CE1126;
+    color: white;
+    align-self: center;
+    margin: 0 62px;
+}
+/*pistons & red wings end*/
+.overview{
+    justify-self: center;
+    align-self: center;
+    grid-column: 1 / span 2;
+    height: 200px;
+}
+.logo{
+    display: flex;
+    max-width: 50px;
+    max-height: 50px;
+}
 }
 
 @media screen and (prefers-reduced-motion: reduce){
@@ -420,38 +430,13 @@ button:focus, button:hover {
       background-attachment: initial;
     }
 }
-.skip{
-    position: absolute;
-    top: -40px;
-  }
-  
-  /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
-  .skip :focus{
-    position: absolute;
-    /*top: 20px;*/ /*40 px seems better for viewing*/
-    top: 40px;
-    white-space: nowrap;
-  }
 
-header{
-    background-color: #fff;
-}
-body > header {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-
-}
 
 @media screen and (min-width: 830px) {
 
-    .lions{
-        display: grid;
+    .lions, .tigers{
         grid-template-columns: repeat(4, 1fr);
-        box-sizing: border-box;
-        align-content: center;
-        border-width: 15px; /*solid #009FF5;
-        border-radius: 10px;*/
+        border-width: 15px;
     }
     .overview{
         justify-self: center;
@@ -510,25 +495,19 @@ body > header {
     .textbox{
         margin-right: 15px;
     }
-
-/*
-.textbox, .titles{
-    grid-row-start: 1;
-    grid-column: 2/ span 1;
-}
-.image{
-    grid-row-start: 1;
-    grid-column: 3/ span 2;
-}*/
-
+    .titles{
+        display: flex;
+    }
+/*lions & tigers*/
+/*pistons & red wings*/
 .pistons, .redWings{
     flex-direction: column;
 }
 #pistonmain{
-    border-width: 15px /*solid #1D42BA*/;
+    border-width: 15px;
 }
 #redWingmain{
-    border-width: 15px /*solid #CE1126*/;
+    border-width: 15px;
 }
 
 .titlesFlex{
@@ -550,26 +529,9 @@ body > header {
 .container :nth-child(4n){
     flex-direction: column-reverse;
 }
+/*pistons & red wings end*/
+}
 
-.tigers{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    box-sizing: border-box;
-    align-content: center;
-    border-width: 15px; /*solid #0C2340;
-    border-radius: 10px;*/
-}
-.titles{
-    display: flex;
-}
-/*
-.filler{
-    grid-column: 1 / span -1;
-    height: 400px;
-}
-*/
-
-}
 @media screen and (min-width: 1230px) {
     #playCont .imgtext{
         flex-direction: row;
@@ -579,38 +541,3 @@ body > header {
     }
 
 }
-/*
-.division img{
-    grid-column: 1 / span 2;
-    height: 200px;
-}
-.stadium{
-    grid-column: 3 / span 2;
-    width: 100%;
-}
-*/
-/*
-@media screen and (min-width: 800px) {
-    .nav_links {
-        background-color: lightgray;
-        display: flex;
-        position: fixed;
-        width: 15%;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        min-height: 100%;
-    }
-
-}
-*/
-/* color values for teams
-border: 2px solid #0076B6;
-    background-color: #B0B7BC;
-border: 2px solid #1D42BA;
-    background-color: #C8102E;    
-border: 2px solid #CE1126;
-    background-color: #FFF;
-border: 2px solid #0C2340;
-    background-color: #FA4616;
-    */
